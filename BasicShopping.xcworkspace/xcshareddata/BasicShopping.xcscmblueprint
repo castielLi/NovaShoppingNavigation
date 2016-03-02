@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "81EACA0C06AD6917496483D9B33C7F30A6D2F1F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "81EACA0C06AD6917496483D9B33C7F30A6D2F1F7" : 0,
+    "C3BEB380721C27D3627300456DDB07CA2AB627F7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CBF19680-6954-42CC-BF6D-869FAA40EEE5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "81EACA0C06AD6917496483D9B33C7F30A6D2F1F7" : "NovaShoppingNavigation\/",
+    "C3BEB380721C27D3627300456DDB07CA2AB627F7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BasicShopping",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BasicShopping.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/castielLi\/NovaShoppingNavigation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81EACA0C06AD6917496483D9B33C7F30A6D2F1F7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.novasoftware.cn\/MobileFramework-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C3BEB380721C27D3627300456DDB07CA2AB627F7"
+    }
+  ]
+}

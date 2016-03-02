@@ -46,28 +46,21 @@ class ViewController: ShoppingCartController {
         self.title = "ShoppingCart"
         
         
-        let shoppingCartView = CustomShoppingCart(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        let shoppingCartView = CustomShoppingCart(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         let barButton = ShoppingNavBarButtonItem(customView: shoppingCartView)
-        barButton.shoppingDelegate = self.navigationController! as! ShoppingNavigation
         barButton.Style = NavigationButtonStyle.ShoppingCart
+    
         
-        
-        
-        
-        let collectionButton = CustomCollection(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
+        let collectionButton = CustomCollection(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         let collectionBarButton = ShoppingNavBarButtonItem(customView: collectionButton)
-        collectionBarButton.shoppingDelegate = self.navigationController! as! ShoppingNavigation
         collectionBarButton.Style = NavigationButtonStyle.Collection
-        self.navigationItem.rightBarButtonItems = [barButton,collectionBarButton]
+        self.navigationItem.rightBarButtonItems = [collectionBarButton,barButton]
         
         
         print(self.navigationItem)
-        
-        
-        
+      
         self.registerShoppingCartEvent(productOne)
         self.registerCollectionOpreateEvent(productTwo)
-        
         
         self.view.addSubview(productOne)
         self.view.addSubview(productTwo)

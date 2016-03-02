@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ShoppingProtocol {
-    func AddProductToShopping(navigationBar : UINavigationItem, code : Int , origin : CGRect)
+    func AddProductToShopping(code : Int , origin : CGRect)
     
-    func AddProductToCollection(navigationBar : UINavigationItem)
+    func AddProductToCollection()
 }

@@ -19,6 +19,25 @@ class ShoppingCartController: UIViewController {
            navigation!.shoppingNavigationItem = self.navigationItem
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if self.navigationItem.rightBarButtonItems != nil{
+            for barButton in self.navigationItem.rightBarButtonItems!{
+                let item = barButton as! ShoppingNavBarButtonItem
+                item.shoppingDelegate = self.navigationController! as! ShoppingNavigation
+            }
+        }
+        
+        if self.navigationItem.leftBarButtonItems != nil{
+            for barButton in self.navigationItem.leftBarButtonItems!{
+                let item = barButton as! ShoppingNavBarButtonItem
+                item.shoppingDelegate = self.navigationController! as! ShoppingNavigation
+            }
+        }
+
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -62,17 +62,17 @@ class ShoppingNavigation: UINavigationController , ShoppingProtocol , Navigation
        
     }
     
-    internal func AddProductToShopping(navigationBar : UINavigationItem,code : Int , origin : CGRect){
+    internal func AddProductToShopping(code : Int , origin : CGRect){
         //通用 - 添加商品到购物车的
         print("Add product in shopping cart")
 
-        startAnimation(origin,navigationBar: navigationBar)
+        startAnimation(origin)
     }
     
-    func AddProductToCollection(navigationBar : UINavigationItem) {
+    func AddProductToCollection() {
         print("Add product in collection")
         
-        startCollectionAnimation(navigationBar)
+        startCollectionAnimation()
     }
     
     
@@ -111,7 +111,7 @@ class ShoppingNavigation: UINavigationController , ShoppingProtocol , Navigation
      
      */
     
-    private func startCollectionAnimation( navigationBar : UINavigationItem){
+    private func startCollectionAnimation(){
         
         
         if self.shoppingNavigationItem!.rightBarButtonItems == nil {
@@ -155,7 +155,7 @@ class ShoppingNavigation: UINavigationController , ShoppingProtocol , Navigation
     /**
       shopping cart animation
     */
-    private func startAnimation(rect: CGRect , navigationBar : UINavigationItem) {
+    private func startAnimation(rect: CGRect) {
         if layer == nil {
             layer = CALayer()
             let iconView = UIImageView(frame: CGRect(origin: rect.origin, size: CGSize(width: 50, height: 50)))
@@ -163,16 +163,29 @@ class ShoppingNavigation: UINavigationController , ShoppingProtocol , Navigation
             layer?.contents = iconView.layer.contents
             layer?.contentsGravity = kCAGravityResizeAspectFill
             layer?.frame = CGRect(origin: rect.origin, size: CGSize(width: 50, height: 50))
+            
             layer?.position = CGPoint(x: iconView.center.x, y: iconView.center.y)
             UIApplication.sharedApplication().keyWindow?.layer.addSublayer(layer!)
             
             path = UIBezierPath()
             path!.moveToPoint(layer!.position)
-            path!.addQuadCurveToPoint(CGPoint(x: UIScreen.mainScreen().bounds.width - 48, y: 40), controlPoint: CGPoint(x: UIScreen.mainScreen().bounds.width * 0.5, y: rect.origin.y - 80))
+            
+            
+            var toPoint : CGPoint?
+            for item in self.shoppingNavigationItem!.rightBarButtonItems!{
+                let barButton = item as! ShoppingNavBarButtonItem
+                print(barButton.customView!.frame)
+                if barButton.Style == NavigationButtonStyle.ShoppingCart{
+                    toPoint = CGPoint(x: barButton.customView!.frame.origin.x, y: barButton.customView!.frame.origin.y + 20)
+                }
+            }
+ 
+            path!.addQuadCurveToPoint(toPoint!, controlPoint: CGPoint(x: UIScreen.mainScreen().bounds.width * 0.5, y: rect.origin.y - 80))
         }
         
         // 组动画
         groupAnimation()
+
     }
     
     /**

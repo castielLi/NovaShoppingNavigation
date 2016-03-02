@@ -26,10 +26,10 @@ extension ShoppingCartController{
     
     
     func AddShoppingCartClick(sender : UIControl){
-       self.shoppingCartProtocol?.AddProductToShopping(self.navigationItem,code: sender.tag, origin: sender.frame)
+       self.shoppingCartProtocol?.AddProductToShopping(sender.tag, origin: sender.frame)
     }
     
     func AddShoppingInCollection(sender : UIControl){
-      self.shoppingCartProtocol?.AddProductToCollection(self.navigationItem)
+      self.shoppingCartProtocol?.AddProductToCollection()
     }
 }
