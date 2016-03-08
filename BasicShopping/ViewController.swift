@@ -66,6 +66,14 @@ class ViewController: ShoppingCartController {
         self.view.addSubview(productTwo)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        var service = ShoppingService()
+//        service.uploadLocation(10, latitude: 20)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

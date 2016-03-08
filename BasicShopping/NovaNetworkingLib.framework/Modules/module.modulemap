@@ -1,0 +1,10 @@
+framework module NovaNetworkingLib {
+  umbrella header "NovaNetworkingLib.h"
+
+  export *
+  module * { export * }
+}
+
+module NovaNetworkingLib.Swift {
+    header "NovaNetworkingLib-Swift.h"
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import NovaNetworkingLib
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 135/255, green: 197/255, blue: 250/255, alpha: 1)
         self.window!.makeKeyAndVisible()
+        
+        RESTconfig.config("http://www.hangu365.com")
+        RESTService.sharedInstance().setRequestHeader(["application/json":"Content-Type","application/json":"Accept"])
         
         return true
     }

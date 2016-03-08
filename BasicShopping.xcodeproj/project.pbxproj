@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		181557501C853109008D5D61 /* NovaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1815574F1C853109008D5D61 /* NovaApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		183B50021C86DC4C00F4288C /* ShoppingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B50011C86DC4C00F4288C /* ShoppingService.swift */; };
+		183B50311C86E41400F4288C /* NovaNetworkingLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183B50301C86E41400F4288C /* NovaNetworkingLib.framework */; };
+		183B50331C86E41B00F4288C /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183B50321C86E41B00F4288C /* AFNetworking.framework */; };
 		1874751A1C80202D00BF9211 /* ShoppingNavBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187475191C80202D00BF9211 /* ShoppingNavBarButtonItem.swift */; };
 		1874751E1C80231200BF9211 /* NavigationButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874751D1C80231200BF9211 /* NavigationButtonStyle.swift */; };
 		187475201C80284300BF9211 /* NavigationRegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1874751F1C80284300BF9211 /* NavigationRegisterProtocol.swift */; };
+		1891BB031C86E7B900495BB2 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183B50321C86E41B00F4288C /* AFNetworking.framework */; };
+		1891BB041C86E7B900495BB2 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183B50321C86E41B00F4288C /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1891BB051C86E7BC00495BB2 /* NovaNetworkingLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183B50301C86E41400F4288C /* NovaNetworkingLib.framework */; };
+		1891BB061C86E7BC00495BB2 /* NovaNetworkingLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 183B50301C86E41400F4288C /* NovaNetworkingLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18B356AF1C7EB0C90067C0D5 /* ExtensionForShoppingCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B356AE1C7EB0C90067C0D5 /* ExtensionForShoppingCartController.swift */; };
 		18B356B11C7EB1240067C0D5 /* ShoppingCartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B356B01C7EB1240067C0D5 /* ShoppingCartController.swift */; };
 		18BBD3201C7FED0200EE3265 /* CustomCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BBD31F1C7FED0200EE3265 /* CustomCollection.swift */; };
@@ -44,12 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		181557531C8531CB008D5D61 /* Embed Frameworks */ = {
+		183B50111C86E09D00F4288C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1891BB061C86E7BC00495BB2 /* NovaNetworkingLib.framework in Embed Frameworks */,
+				1891BB041C86E7B900495BB2 /* AFNetworking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,7 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1815574F1C853109008D5D61 /* NovaApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NovaApp.framework; path = /Users/apple/Desktop/Nova/NovaShoppingNavigation/BasicShopping/NovaApp.framework; sourceTree = "<absolute>"; };
+		183B50011C86DC4C00F4288C /* ShoppingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingService.swift; sourceTree = "<group>"; };
+		183B50301C86E41400F4288C /* NovaNetworkingLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NovaNetworkingLib.framework; sourceTree = "<group>"; };
+		183B50321C86E41B00F4288C /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = "<group>"; };
 		187475191C80202D00BF9211 /* ShoppingNavBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingNavBarButtonItem.swift; sourceTree = "<group>"; };
 		1874751D1C80231200BF9211 /* NavigationButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationButtonStyle.swift; sourceTree = "<group>"; };
 		1874751F1C80284300BF9211 /* NavigationRegisterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationRegisterProtocol.swift; sourceTree = "<group>"; };
@@ -90,7 +100,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181557501C853109008D5D61 /* NovaApp.framework in Frameworks */,
+				183B50311C86E41400F4288C /* NovaNetworkingLib.framework in Frameworks */,
+				1891BB051C86E7BC00495BB2 /* NovaNetworkingLib.framework in Frameworks */,
+				1891BB031C86E7B900495BB2 /* AFNetworking.framework in Frameworks */,
+				183B50331C86E41B00F4288C /* AFNetworking.framework in Frameworks */,
 				A7C7B60B4120192E87D5453E /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +125,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183B50001C86DBFC00F4288C /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				183B50321C86E41B00F4288C /* AFNetworking.framework */,
+				183B50301C86E41400F4288C /* NovaNetworkingLib.framework */,
+				18D9045E1C7DA4E300BA1D0C /* AppDelegate.swift */,
+				18B356AD1C7EA60C0067C0D5 /* Header.h */,
+				18D904601C7DA4E300BA1D0C /* ViewController.swift */,
+				183B50011C86DC4C00F4288C /* ShoppingService.swift */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
 		18D904521C7DA4E300BA1D0C = {
 			isa = PBXGroup;
 			children = (
@@ -137,15 +163,13 @@
 		18D9045D1C7DA4E300BA1D0C /* BasicShopping */ = {
 			isa = PBXGroup;
 			children = (
-				18D9045E1C7DA4E300BA1D0C /* AppDelegate.swift */,
-				18D904601C7DA4E300BA1D0C /* ViewController.swift */,
+				183B50001C86DBFC00F4288C /* Demo */,
 				18D904651C7DA4E300BA1D0C /* Assets.xcassets */,
 				18D904671C7DA4E300BA1D0C /* LaunchScreen.storyboard */,
 				18D9046A1C7DA4E300BA1D0C /* Info.plist */,
 				18D9048C1C7DA5F000BA1D0C /* ShoppingNavigation.swift */,
 				18D9048E1C7DA64600BA1D0C /* ShoppingProtocol.swift */,
 				18D904921C7DA96100BA1D0C /* CustomShoppingCart.swift */,
-				18B356AD1C7EA60C0067C0D5 /* Header.h */,
 				18B356AE1C7EB0C90067C0D5 /* ExtensionForShoppingCartController.swift */,
 				18B356B01C7EB1240067C0D5 /* ShoppingCartController.swift */,
 				18BBD31F1C7FED0200EE3265 /* CustomCollection.swift */,
@@ -204,7 +228,7 @@
 				18D904591C7DA4E300BA1D0C /* Resources */,
 				75F6BF3246938B98D2C67335 /* Embed Pods Frameworks */,
 				75E273A411E4DA45779AE9AE /* Copy Pods Resources */,
-				181557531C8531CB008D5D61 /* Embed Frameworks */,
+				183B50111C86E09D00F4288C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,6 +406,7 @@
 				18D9048D1C7DA5F000BA1D0C /* ShoppingNavigation.swift in Sources */,
 				18D9045F1C7DA4E300BA1D0C /* AppDelegate.swift in Sources */,
 				18D9048F1C7DA64600BA1D0C /* ShoppingProtocol.swift in Sources */,
+				183B50021C86DC4C00F4288C /* ShoppingService.swift in Sources */,
 				18B356AF1C7EB0C90067C0D5 /* ExtensionForShoppingCartController.swift in Sources */,
 				18BBD3201C7FED0200EE3265 /* CustomCollection.swift in Sources */,
 			);
@@ -521,6 +546,7 @@
 					"$(PROJECT_DIR)/BasicShopping",
 				);
 				INFOPLIST_FILE = BasicShopping/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.castiel..BasicShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,6 +564,7 @@
 					"$(PROJECT_DIR)/BasicShopping",
 				);
 				INFOPLIST_FILE = BasicShopping/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.castiel..BasicShopping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
